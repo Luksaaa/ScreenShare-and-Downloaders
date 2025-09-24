@@ -3,8 +3,8 @@ from yt_dlp import YoutubeDL
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 
-SPOTIFY_CLIENT_ID = '8deb872e9f184353ab3a68517d455c4b'
-SPOTIFY_CLIENT_SECRET = '6406a3ee9b9649f19dc2fb84b8a39abe'
+SPOTIFY_CLIENT_ID = 'SPOTIFY_CLIENT_ID'
+SPOTIFY_CLIENT_SECRET = 'SPOTIFY_CLIENT_SECRET'
 
 def get_spotify_tracks(url, is_single):
     try:
