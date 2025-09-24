@@ -17,14 +17,13 @@ def main():
         os.system("pause")
         return
 
-    # Parsiraj listu uređaja
-    lines = out.splitlines()[1:]  # preskoči header "List of devices attached"
+    lines = out.splitlines()[1:]
     usb_devices = [line.split()[0] for line in lines if "\tdevice" in line and ":" not in line]
 
     if not usb_devices:
         print("❌ Nema pronađenih USB uređaja.")
         print("➡️  Provjeri da je mobitel spojen USB kabelom i da je uključeno USB debugging.")
-        os.system("pause")   # ostavi prozor otvoren
+        os.system("pause")
         return
 
     serial = usb_devices[0]
@@ -37,7 +36,7 @@ def main():
     else:
         print("✅ scrcpy završen.")
 
-    os.system("pause")   # drži prozor otvoren na kraju
+    os.system("pause")
 
 if __name__ == "__main__":
     main()
