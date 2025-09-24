@@ -1,9 +1,8 @@
 import subprocess
 import os
 
-# 🔧 Postavi IP adresu i port tvog uređaja
-DEVICE_IP = "192.168.1.202"
-DEVICE_PORT = "45285"
+DEVICE_IP = "IP_address"
+DEVICE_PORT = "DEVICE_PORT"
 DEVICE_ADDR = f"{DEVICE_IP}:{DEVICE_PORT}"
 
 def run_command(cmd):
@@ -31,7 +30,7 @@ def main():
     else:
         print("✅ scrcpy završen.")
 
-    os.system("pause")   # ostavi CMD otvoren na kraju
+    os.system("pause")
 
 if __name__ == "__main__":
     main()
