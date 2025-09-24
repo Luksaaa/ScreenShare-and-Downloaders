@@ -27,17 +27,13 @@ def main():
     url = input("YouTube URL  --> ").strip()
     save_path = input("Folder to save (npr. C:/User/Desktop) --> ").strip()
 
-    # Osiguraj ispravnu putanju
     if not save_path.endswith(("\\", "/")):
         save_path += "/"
 
-    # Put do ffmpeg foldera
-    ffmpeg_path = "C:/ffmpeg"  # ← prilagodi ovo ako je drugačije
+    ffmpeg_path = "C:/ffmpeg"
 
-    # Template za spremanje
     output_template = os.path.join(save_path, "%(title)s.%(ext)s")
 
-    # Priprema popisa za preuzimanje
     is_single = choice == '1'
     urls, titles = get_youtube_playlist_items(url) if not is_single else ([url], [''])
 
